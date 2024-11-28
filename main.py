@@ -4,16 +4,16 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-# Add CORS middleware
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Allow your React app's origin
+    allow_origins=["http://localhost:3000"],  # Allow requests from your local React app
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
 )
 
 
 @app.get("/")
 async def root():
-    return JSONResponse(content={"message": "Hello, FastAPI on Vercel2!"})
+    return JSONResponse(content={"message": "Hello, FastAPI on Vercel v3"})
