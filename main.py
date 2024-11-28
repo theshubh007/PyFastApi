@@ -16,4 +16,4 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return JSONResponse(content={"message": "Hello, FastAPI on Vercel!"})
+    return JSONResponse(content={"message": "Hello, FastAPI on Vercel2!"})
